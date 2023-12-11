@@ -1,0 +1,49 @@
+{{template "base" .}} 
+{{define "content"}}
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="row d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-9">
+              <form action="/request-drugs" enctype="multipart/form-data" method="post" role="form" class="">
+                <span class="text-primary">Place your request</span>
+                
+                <div class="row m-3">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="institution" class="form-control" id="institution" placeholder="Enter name of your institution">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="physician" class="form-label">Name of Physician*</label>
+                        <input type="text" name="physician" class="form-control" id="physician" placeholder="Enter the name of your physician">
+                    </div>
+                    <div class="col">
+                        <label for="photo" class="form-label">Upload your prescription form*</label>
+                        <input name="prescription" class="form-control" id="prescription" type="file" />
+                        <div id="prescriptionText" class="form-text">
+                            It is recommended you use a phone with a good camera.
+                          </div>
+                    </div>
+                </div>
+                <div class="row mx-3 mb-3">
+                    <div class="col-6">
+                        <input type="text" name="location" class="form-control" id="location" placeholder="Enter your location">
+                    </div>
+                </div>
+                <div class="row mx-3">
+                    <div class="col-md-6 form-group">
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+{{end}}

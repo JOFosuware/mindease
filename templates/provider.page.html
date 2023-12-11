@@ -1,0 +1,39 @@
+{{template "base" .}}
+{{define "content"}}
+    <!-- ======= Providers Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container mt-5" data-aos="zoom-out" data-aos-delay="100">
+        {{$p := index .Data "provider"}}
+         <!-- User Profile Section -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <!-- User Profile Picture -->
+            <img src="data:image/png;base64,{{convertToBase64 $p.Photo}}" alt="Provider image" class="img-fluid mx-auto d-block rounded-circle m-3" style="max-width: 100px;">
+        </div>
+        <div class="col-md-8">
+            <!-- User Information -->
+            <h2>{{$p.Name}}</h2>
+            <p>@{{$p.Username}}</p>
+            <!-- Add additional user details here -->
+        </div>
+    </div>
+
+    <!-- User Posts Section -->
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <!-- Post 1 -->
+            {{range $n := index .Data "notifications"}}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Appointment from {{$n.Name}}</h5>
+                    <p class="card-text">You have been booked for a session with {{$n.Name}} phone number 0{{$n.Phone}}. Connect with the person within 2 hours.</p>
+                </div>
+            </div>
+            {{end}}
+            <!-- Add more posts as needed -->
+
+        </div>
+    </div>
+    </div>
+  </section><!-- End Providers -->
+{{end}}

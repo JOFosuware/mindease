@@ -1,0 +1,46 @@
+{{template "base" .}} 
+{{define "content"}}
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="row d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-9">
+              <form action="/client-profile" enctype="multipart/form-data" method="post" role="form" class="">
+                <span class="text-primary">Enter your credentials</span>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="name" class="form-label">Name*</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="username" class="form-label">Username*</label>
+                            <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="photo" class="form-label">Upload your photo*</label>
+                            <input name="photo" class="form-control" id="photo" type="file" />
+                        </div>
+                    </div>
+                      <div class="col-md-6 form-group mb-3">
+                        <label for="description" class="form-label">Your work experience*</label>
+                        <textarea name="description" class="form-control" id="description" rows="6"></textarea>
+                      </div>
+                      <div class="col-md-6 form-group mb-3">
+                        <label for="password" class="form-label">Password*</label>
+                        <input type="text" name="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 form-group">
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+{{end}}
