@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.0 (Ubuntu 16.0-1.pgdg22.04+1)
--- Dumped by pg_dump version 16.0 (Ubuntu 16.0-1.pgdg22.04+1)
+-- Dumped from database version 15.5 (Ubuntu 15.5-1.pgdg22.04+1)
+-- Dumped by pg_dump version 15.5 (Ubuntu 15.5-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -49,7 +49,7 @@ CREATE SEQUENCE public.clients_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.clients_id_seq OWNER TO postgres;
+ALTER TABLE public.clients_id_seq OWNER TO postgres;
 
 --
 -- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -87,7 +87,7 @@ CREATE SEQUENCE public.notifications_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.notifications_id_seq OWNER TO postgres;
+ALTER TABLE public.notifications_id_seq OWNER TO postgres;
 
 --
 -- Name: notifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -128,7 +128,7 @@ CREATE SEQUENCE public.prescriptions_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.prescriptions_id_seq OWNER TO postgres;
+ALTER TABLE public.prescriptions_id_seq OWNER TO postgres;
 
 --
 -- Name: prescriptions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -168,7 +168,7 @@ CREATE SEQUENCE public.providers_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.providers_id_seq OWNER TO postgres;
+ALTER TABLE public.providers_id_seq OWNER TO postgres;
 
 --
 -- Name: providers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
